@@ -1,4 +1,4 @@
-const DUMMY_DATA = [
+const DUMMY_REPORTS = [
   {
     id: "1",
     title: "Monthly Sales Report",
@@ -49,3 +49,18 @@ const DUMMY_DATA = [
     image: "performance_review_image.jpg",
   },
 ];
+
+export function getAllReports() {
+  return DUMMY_REPORTS;
+}
+export function getFilteredReports(dateFilter) {
+  const { year, month } = dateFilter;
+
+  let filteredReports = DUMMY_REPORTS.filter((report) => {
+    const reportDate = new Date(report.date);
+    return (
+      reportDate.getFullYear() === year && eventDate.getMonth() === month - 1
+    );
+  });
+  return filteredReports;
+}
