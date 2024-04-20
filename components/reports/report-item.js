@@ -8,7 +8,7 @@ function ReportItem(props) {
     month: "long",
     year: "numeric",
   });
-  const formattedTime = time
+  const formattedTime = time;
   return (
     <tr className={classes.item}>
       <td className={classes.time}>
