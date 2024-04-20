@@ -1,14 +1,16 @@
 import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
 import { Fragment } from "react";
 import Reports from "./reports";
+import { getAllReports } from "@/dummy-data";
+import ReportList from "@/components/reports/report-list";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const allReports = getAllReports();
   return (
     <>
-      <h1>This is the home page</h1>
+      <ReportList items={allReports} />
     </>
   );
 }
