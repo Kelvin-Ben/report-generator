@@ -1,7 +1,6 @@
 import ReportItem from "./report-item";
 import classes from "./report-list.module.css";
 
-
 function ReportList(props) {
   const { items } = props;
   return (

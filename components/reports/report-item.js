@@ -1,4 +1,3 @@
-// import CsvDownload from "./icons/donwload";
 import classes from "./report-item.module.css";
 
 function ReportItem(props) {
@@ -8,7 +7,7 @@ function ReportItem(props) {
     month: "long",
     year: "numeric",
   });
-  const formattedTime = time
+  const formattedTime = time;
   return (
     <tr className={classes.item}>
       <td className={classes.time}>
