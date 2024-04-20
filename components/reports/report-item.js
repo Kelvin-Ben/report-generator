@@ -1,5 +1,5 @@
 // import CsvDownload from "./icons/donwload";
-import classes from './report-item.module.css'
+import classes from "./report-item.module.css";
 
 function ReportItem(props) {
   const { title, date, time, image } = props;
@@ -8,26 +8,22 @@ function ReportItem(props) {
     month: "long",
     year: "numeric",
   });
-  const formattedTime = new Date(time).toLocaleTimeString("en-US", {
-    hour: "numeric",
-    minute: "numeric",
-    // hour12: true,
-  });
+  const formattedTime = time
   return (
-    <li className={classes.item}>
-      {/* <div className={classes.content}> */}
-        <div className={classes.time}>
-          <time className={classes.date}>
-            <span>{formattedDate}</span>
-            <span>{formattedTime}</span>
-          </time>
-        </div>
-        <div className={classes.title}>
-          <h3>{title}</h3>
-        </div>
-        <img src={"/" + image} className={classes.download}/>
-      {/* </div> */}
-    </li>
+    <tr className={classes.item}>
+      <td className={classes.time}>
+        <td className={classes.date}>
+          <span>{formattedDate}</span>
+          <span>{formattedTime}</span>
+        </td>
+      </td>
+      <td className={classes.title}>
+        <h3>{title}</h3>
+      </td>
+      <td className={classes.download_icon}>
+        <img src={"/" + image} className={classes.download} />
+      </td>
+    </tr>
   );
 }
 export default ReportItem;
