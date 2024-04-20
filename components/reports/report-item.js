@@ -1,4 +1,3 @@
-// import CsvDownload from "./icons/donwload";
 import classes from "./report-item.module.css";
 
 function ReportItem(props) {
