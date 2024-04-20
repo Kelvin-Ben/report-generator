@@ -1,0 +1,22 @@
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid black;
+  margin: 1rem 0;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.download_icon {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.download {
+  display: flex;
+  cursor: pointer;
+}

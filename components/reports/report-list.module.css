@@ -1,0 +1,23 @@
+.report_container {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+.list {
+  list-style: none;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: grey;
+  font-weight: bolder;
+  height: 2rem;
+}
+
+.main_heading {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
