@@ -1,0 +1,32 @@
+.paginator {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.paginator li {
+  margin: 0 5px;
+}
+
+.paginator button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.paginator button:hover {
+  background-color: #f0f0f0;
+}
+
+.paginator button:disabled {
+  color: #999;
+  cursor: not-allowed;
+}
+
+.paginator button.active {
+  background-color: #007bff;
+  color: #fff;
+}
