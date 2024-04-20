@@ -1,17 +1,19 @@
 import ReportItem from "./report-item";
-import classes from './report-list.module.css'
+import classes from "./report-list.module.css";
+
 
 function ReportList(props) {
   const { items } = props;
   return (
-    <div className={classes.report_container}>
-    <h1 className={classes.title}>All Reports</h1>
-      <div className={classes.content}>
-        <span className={classes.report_title}>Date</span>
-        <span className={classes.report_title}>Report Name</span>
-        <span className={classes.report_title}>Download</span>
-      </div>
-      <ul className={classes.list}>
+    <table className={classes.report_container}>
+      <thead className={classes.content}>
+        <tr className={classes.main_heading}>
+          <th className={classes.report_title}>Date</th>
+          <th className={classes.report_title}>Report Name</th>
+          <th className={classes.report_title}>Download</th>
+        </tr>
+      </thead>
+      <tbody className={classes.list}>
         {items.map((report) => (
           <ReportItem
             key={report.id}
@@ -21,8 +23,8 @@ function ReportList(props) {
             image={report.image}
           />
         ))}
-      </ul>
-    </div>
+      </tbody>
+    </table>
   );
 }
 export default ReportList;
